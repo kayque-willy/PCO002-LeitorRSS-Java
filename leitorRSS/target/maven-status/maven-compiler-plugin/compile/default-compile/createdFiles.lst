@@ -1,0 +1,17 @@
+br\com\pco002\model\Url_topico.class
+br\com\pco002\util\FaceUtil.class
+br\com\pco002\model\GenericEntity.class
+br\com\pco002\model\FeedMessage.class
+br\com\pco002\repository\ConnectionFactory.class
+br\com\pco002\repository\GenericRepository.class
+br\com\pco002\model\Topico.class
+br\com\pco002\model\Usuario.class
+br\com\pco002\model\Topico_.class
+br\com\pco002\model\Usuario_.class
+br\com\pco002\service\UsuarioService.class
+br\com\pco002\service\TopicoService.class
+br\com\pco002\model\Url_topico_.class
+br\com\pco002\repository\TopicoRepository.class
+br\com\pco002\leitor\LeitorRSS.class
+br\com\pco002\repository\UsuarioRepository.class
+br\com\pco002\model\Feed.class

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://leitor.pco002.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://leitor.pco002.com.br/">
+
+<xs:element name="Feed" type="tns:Feed"/>
+
+<xs:element name="FeedMessage" type="tns:FeedMessage"/>
+
+<xs:element name="readFeed" type="tns:readFeed"/>
+
+<xs:element name="readFeedResponse" type="tns:readFeedResponse"/>
+
+<xs:element name="readTopic" type="tns:readTopic"/>
+
+<xs:element name="readTopicResponse" type="tns:readTopicResponse"/>
+
+<xs:element name="teste" type="tns:teste"/>
+
+<xs:element name="testeResponse" type="tns:testeResponse"/>
+
+<xs:complexType name="teste">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="testeResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="readFeed">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readFeedResponse">
+<xs:sequence>
+<xs:element name="feed" type="tns:Feed" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Feed">
+<xs:sequence>
+<xs:element name="title" type="xs:string"/>
+<xs:element name="link" type="xs:string"/>
+<xs:element name="description" type="xs:string"/>
+<xs:element name="language" type="xs:string"/>
+<xs:element name="copyright" type="xs:string"/>
+<xs:element name="pubDate" type="xs:string"/>
+<xs:element name="entries" minOccurs="0">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="entrie" type="tns:FeedMessage" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FeedMessage">
+<xs:sequence>
+<xs:element name="title" type="xs:string"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="link" type="xs:string"/>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+<xs:element name="guid" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:dateTime"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readTopic">
+<xs:sequence>
+<xs:element name="topico" type="tns:topico" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="topico">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="quant" type="xs:int"/>
+<xs:element name="urls" type="tns:urlTopico" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="usuarios" type="tns:usuario" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="urlTopico">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="topico" type="tns:topico" minOccurs="0"/>
+<xs:element name="ultimaAtualizacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="url" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="topicos" type="tns:topico" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readTopicResponse">
+<xs:sequence>
+<xs:element name="feedList" type="tns:Feed" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
