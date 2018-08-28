@@ -34,10 +34,7 @@ import javax.xml.transform.stream.StreamResult;
 @WebService(serviceName = "leitorRSS")
 @Stateless
 public class LeitorRSS {
-    
-//    @PersistenceContext(unitName="rss-persistence") 
-//    protected EntityManager entityManager;
-    
+
     static final String TITLE = "title";
     static final String DESCRIPTION = "description";
     static final String CHANNEL = "channel";
