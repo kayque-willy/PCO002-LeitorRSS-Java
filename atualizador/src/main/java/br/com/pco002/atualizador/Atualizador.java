@@ -13,11 +13,13 @@ import br.com.pco002.util.FaceUtil;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
@@ -39,6 +41,9 @@ public class Atualizador {
 
     //-----------------------------MAIN--------------------------------
     public static void main(String[] args) {
+        LogManager logManager = LogManager.getLogManager();
+        Logger logger = logManager.getLogger("");
+        logger.setLevel(Level.OFF); //could be Level.OFF
         Timer timer = null;
         long TEMPO = (1000 * 30); // chama o método a cada 30 segundos 
         System.out.println("Iniciando a atualização de notificações...");
