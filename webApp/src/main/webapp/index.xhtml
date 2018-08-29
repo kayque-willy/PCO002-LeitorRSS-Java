@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:messages id="messages" />
+            <p:panelGrid columns="2">
+                <p:outputLabel for="nomeUsuario" value="Nome Usuário:" />
+                <p:inputText id="nomeUsuario" value="#{index.usuario.email}" />
+
+                <p:outputLabel for="senha" value="Senha:" />
+                <p:password id="senha" value="#{index.usuario.senha}" />
+
+                <p:commandButton value="Teste Hibernate" icon="ui-icon-star" action="#{index.fazerLogin}" ajax="false">
+                </p:commandButton>
+                <p:commandButton value="Teste SQL" icon="ui-icon-star" action="#{index.testeSql}" ajax="false">
+                </p:commandButton>
+
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
