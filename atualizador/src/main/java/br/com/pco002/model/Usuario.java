@@ -29,6 +29,9 @@ public class Usuario implements GenericEntity, Serializable{
     @Column(name="email", nullable=false) 
     private String email;
     
+    @Column(name="senha", nullable=false) 
+    private String senha;
+    
     @Column(name="tipo", nullable=false) 
     private String tipo;
     
@@ -78,14 +81,23 @@ public class Usuario implements GenericEntity, Serializable{
         this.inscricoes = inscricoes;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.id);
-        hash = 37 * hash + Objects.hashCode(this.nome);
-        hash = 37 * hash + Objects.hashCode(this.email);
-        hash = 37 * hash + Objects.hashCode(this.tipo);
-        hash = 37 * hash + Objects.hashCode(this.inscricoes);
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.id);
+        hash = 97 * hash + Objects.hashCode(this.nome);
+        hash = 97 * hash + Objects.hashCode(this.email);
+        hash = 97 * hash + Objects.hashCode(this.senha);
+        hash = 97 * hash + Objects.hashCode(this.tipo);
+        hash = 97 * hash + Objects.hashCode(this.inscricoes);
         return hash;
     }
 
@@ -105,6 +117,9 @@ public class Usuario implements GenericEntity, Serializable{
             return false;
         }
         if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        if (!Objects.equals(this.senha, other.senha)) {
             return false;
         }
         if (!Objects.equals(this.tipo, other.tipo)) {
