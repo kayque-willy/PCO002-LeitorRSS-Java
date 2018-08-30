@@ -18,6 +18,7 @@
                 <h:outputText value="#{topico.nome} - Ultima atualização: #{topico.ultimaAtualizacao}" />
                 <f:param name="topicoId" value="#{topico.id}" />
             </h:outputLink> 
+            <p:commandButton  value="Cancelar inscrição" action="#{home.cancelarInscricao(topico)}" ajax="false"/>
             <br/><br/>
         </p:dataList>
     </ui:define>

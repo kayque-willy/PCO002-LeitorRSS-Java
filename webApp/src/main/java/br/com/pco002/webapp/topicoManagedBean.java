@@ -12,14 +12,14 @@ import java.util.Comparator;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 @ManagedBean(name = "topicoFeed")
-@SessionScoped
+@ViewScoped
 public class topicoManagedBean extends genericManagedBean{
 
     //PARAMETROS DO WEBSERVICE

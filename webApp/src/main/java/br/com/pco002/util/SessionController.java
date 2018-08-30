@@ -12,5 +12,11 @@ public class SessionController {
     public void setUsuario(Usuario usuario) {
          FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", usuario);
     }
+    
+    public void removeUsuario() {
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().remove("usuario");
+    }
+    
+    
 
 }

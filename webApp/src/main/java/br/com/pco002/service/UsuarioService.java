@@ -4,7 +4,9 @@ import br.com.pco002.model.Usuario;
 import br.com.pco002.repository.UsuarioRepository;
 import br.com.pco002.util.ResourceUtil;
 import java.util.List;
+import javax.faces.bean.ApplicationScoped;
 
+@ApplicationScoped
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository = new UsuarioRepository();

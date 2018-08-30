@@ -3,7 +3,9 @@ package br.com.pco002.service;
 import br.com.pco002.model.Topico;
 import br.com.pco002.repository.TopicoRepository;
 import java.util.List;
+import javax.faces.bean.ApplicationScoped;
 
+@ApplicationScoped
 public class TopicoService {
 
     private static final TopicoRepository topicoRepository = new TopicoRepository();

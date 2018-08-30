@@ -3,14 +3,14 @@ package br.com.pco002.webapp;
 import br.com.pco002.model.Inscricao;
 import br.com.pco002.model.Topico;
 import br.com.pco002.model.Usuario;
-import br.com.pco002.util.SessionController;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
 @ManagedBean(name = "home")
-@SessionScoped
+@ViewScoped
 public class homeManagedBean extends genericManagedBean{
 
     private List<Topico> inscricoes  = new ArrayList();

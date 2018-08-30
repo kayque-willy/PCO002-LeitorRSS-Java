@@ -1,31 +1,25 @@
 package br.com.pco002.webapp;
 
 import br.com.pco002.model.Usuario;
-import br.com.pco002.service.UsuarioService;
-import br.com.pco002.util.SessionController;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 @ManagedBean(name = "index")
-@SessionScoped
+@ViewScoped
 public class indexManagedBean extends genericManagedBean{
 
-    @Inject()
-    private UsuarioService usuarioService;
     private Usuario usuario = new Usuario();
 
-    public indexManagedBean() {
-        this.usuarioService = new UsuarioService();
-    }
+    public indexManagedBean() {}
 
     public String fazerLogin() {
-        usuario = usuarioService.fazerLogin(usuario.getEmail(), usuario.getSenha());
+        usuario = getUsuarioService().fazerLogin(usuario.getEmail(), usuario.getSenha());
         if (usuario != null) {
             setUsuarioSessao(usuario);
             return "home/home";
