@@ -9,6 +9,7 @@ br\com\pco002\leitor\ObjectFactory.class
 br\com\pco002\service\TopicoService.class
 br\com\pco002\leitor\LeitorRSS.class
 br\com\pco002\repository\UsuarioRepository.class
+br\com\pco002\webapp\topicoManagedBean$1.class
 br\com\pco002\util\ResourceUtil.class
 br\com\pco002\webapp\indexManagedBean.class
 br\com\pco002\model\Inscricao.class

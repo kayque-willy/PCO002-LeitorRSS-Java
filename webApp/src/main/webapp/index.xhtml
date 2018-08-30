@@ -9,18 +9,18 @@
     <h:body>
         <h:form>
             <p:messages id="messages" />
-            <p:panelGrid columns="2">
+            <h1 style="text-align: center"> Sistema de leitura de RSS</h1>
+            <p:panelGrid columns="2" style="position: absolute; left: 450px;">
                 <p:outputLabel for="nomeUsuario" value="Nome Usuário:" />
                 <p:inputText id="nomeUsuario" value="#{index.usuario.email}" />
 
                 <p:outputLabel for="senha" value="Senha:" />
                 <p:password id="senha" value="#{index.usuario.senha}" />
 
-                <p:commandButton value="Teste Hibernate" icon="ui-icon-star" action="#{index.fazerLogin}" ajax="false">
+<!--                <p:commandButton value="Teste SQL" icon="ui-icon-star" action="# {index.testeSql}" ajax="false">
+                </p:commandButton>-->
+                <p:commandButton value="Fazer Login" icon="ui-icon-star" action="#{index.fazerLogin}" ajax="false">
                 </p:commandButton>
-                <p:commandButton value="Teste SQL" icon="ui-icon-star" action="#{index.testeSql}" ajax="false">
-                </p:commandButton>
-
             </p:panelGrid>
         </h:form>
     </h:body>

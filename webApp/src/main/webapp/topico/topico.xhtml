@@ -1,15 +1,39 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h1>#{topicoFeed.topico.nome}</h1>
-        <h2>Feed de notícias</h2>
-        <h3>Última atualização: #{topicoFeed.topico.ultimaAtualizacao}</h3>
+        <h1 style="text-align: center"> #{topicoFeed.topico.nome}</h1>
+        <h2 style="text-align: center">Feed de notícias</h2>
+        <h3 style="text-align: center">Última atualização: #{topicoFeed.topico.ultimaAtualizacao}</h3>
         <hr></hr>
+        <p:dataScroller value="#{topicoFeed.mensagensFeed}" var="feed" chunkSize="10" >
+            <f:facet name="header">
+                Desça para carregar mais noticias
+            </f:facet>
+
+            <h:panelGrid columns="2" style="width:100%;" columnClasses="logo,detail">
+                <p:graphicImage url="/resources/imagem.png" width="150" height="150"/> 
+                <p:outputPanel>
+                    <h:outputLink value = "#{feed.link}" >
+                         <h:outputText value="#{feed.title}" style="font-weight: bold"/>
+                    </h:outputLink>
+                    <br/><br/>
+                    <h:outputText value="#{feed.date}"/>
+                    <h:panelGrid columns="2" cellpadding="5">
+                        <h:outputText value="#{feed.description}"/>
+                    </h:panelGrid>
+                    <h:outputText value="#{feed.author}"/>
+                </p:outputPanel>
+            </h:panelGrid>
+            <hr></hr>
+        </p:dataScroller>
+
     </h:body>
 </html>
 

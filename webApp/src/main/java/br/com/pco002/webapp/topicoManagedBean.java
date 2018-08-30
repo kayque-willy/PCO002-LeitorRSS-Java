@@ -7,7 +7,10 @@ import br.com.pco002.leitor.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -28,12 +31,13 @@ public class topicoManagedBean {
     private static QName qname;
     private static Service ws;
     private static LeitorRSS leitor;
-    private List<Feed> feedLista = new ArrayList<Feed>();
 
     //ATRIBUTOS DO JAVA BEAN
     @Inject()
     private TopicoService topicoService;
     private Topico topico = new Topico();
+    private List<Feed> feedLista = new ArrayList<Feed>();
+    private List<FeedMessage> mensagensFeed = new ArrayList<FeedMessage>();
 
     public topicoManagedBean() {
         this.topicoService = new TopicoService();
@@ -41,8 +45,9 @@ public class topicoManagedBean {
         consultarTopico();
         if (topico != null) {
             lerFeedTopico();
+            gerarListaMensagens();
+            ordenarLista();
         }
-        feedLista.get(0);
     }
 
     //Consulta o tópico pelo ID passado por parâmetro
@@ -84,6 +89,24 @@ public class topicoManagedBean {
         }
     }
 
+    //Organiza a lista das mensages para apresentação
+    private void gerarListaMensagens() {
+        for (Feed feed : feedLista) {
+            List<FeedMessage> mensagens = feed.getEntries().getEntrie();
+            mensagensFeed.addAll(mensagens);
+        }
+    }
+
+    //Reeordena a lista de mensagens por data
+    private void ordenarLista() {
+        Collections.sort(mensagensFeed, new Comparator<FeedMessage>() {
+            public int compare(FeedMessage o1, FeedMessage o2) {
+                return o1.getDate().toGregorianCalendar().getTime().compareTo(o2.getDate().toGregorianCalendar().getTime());
+            }
+        });
+        Collections.reverse(mensagensFeed);
+    }
+
     //GETS E SETS
     public Topico getTopico() {
         return topico;
@@ -93,4 +116,19 @@ public class topicoManagedBean {
         this.topico = topico;
     }
 
+    public List<Feed> getFeedLista() {
+        return feedLista;
+    }
+
+    public void setFeedLista(List<Feed> feedLista) {
+        this.feedLista = feedLista;
+    }
+
+    public List<FeedMessage> getMensagensFeed() {
+        return mensagensFeed;
+    }
+
+    public void setMensagensFeed(List<FeedMessage> mensagensFeed) {
+        this.mensagensFeed = mensagensFeed;
+    }
 }
