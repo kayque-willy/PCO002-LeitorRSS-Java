@@ -2,7 +2,6 @@ package br.com.pco002.webapp;
 
 import br.com.pco002.model.Usuario;
 import br.com.pco002.service.UsuarioService;
-import br.com.pco002.util.ResourceUtil;
 import br.com.pco002.util.SessionController;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -20,6 +19,7 @@ public class indexManagedBean {
     @Inject()
     private UsuarioService usuarioService;
     private SessionController sessionController;
+    
     private Usuario usuario = new Usuario();
 
     public indexManagedBean() {
@@ -28,12 +28,10 @@ public class indexManagedBean {
     }
 
     public String fazerLogin() {
-        usuario.setEmail(usuario.getEmail().toLowerCase().trim());
-        usuario.setSenha(ResourceUtil.convertStringToMd5(usuario.getSenha()));
         usuario = usuarioService.fazerLogin(usuario.getEmail(), usuario.getSenha());
         if (usuario != null) {
              sessionController.setUsuario(usuario);
-            return "main/home";
+            return "home/home";
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha incorretos!", "Erro no Login!"));
             return null;

@@ -1,26 +1,17 @@
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\repository\ConnectionFactory.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\ReadFeed.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\package-info.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\Topico.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\Url_topico.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\ReadFeedResponse.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\LeitorRSS.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\util\ResourceUtil.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\service\TopicoService.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\service\UsuarioService.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\Inscricao.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\util\FaceUtil.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\util\SessionController.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\Feed.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\repository\TopicoRepository.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\ReadTopic.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\Notificacao.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\Usuario.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\repository\UsuarioRepository.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\webapp\indexManagedBean.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\FeedMessage.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\ReadTopicResponse.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\repository\GenericRepository.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\ObjectFactory.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\src\main\java\br\com\pco002\model\GenericEntity.java
-D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\webApp\target\generated-sources\wsimport\br\com\pco002\leitor\LeitorRSS_Service.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\util\SessionController.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\repository\UsuarioRepository.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\repository\GenericRepository.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\util\FaceUtil.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\repository\TopicoRepository.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\service\UsuarioService.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\webapp\indexManagedBean.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\Inscricao.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\Url_topico.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\Notificacao.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\GenericEntity.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\Topico.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\util\ResourceUtil.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\repository\ConnectionFactory.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\model\Usuario.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\webapp\homeManagedBean.java
+D:\Usuarios\kayque\OneDrive\Universidade\PCO002 - Sistemas Distribuidos\Java RSS\webApp\src\main\java\br\com\pco002\service\TopicoService.java

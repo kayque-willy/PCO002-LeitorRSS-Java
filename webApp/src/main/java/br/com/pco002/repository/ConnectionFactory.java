@@ -3,7 +3,6 @@ package br.com.pco002.repository;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 
 public class ConnectionFactory {
 

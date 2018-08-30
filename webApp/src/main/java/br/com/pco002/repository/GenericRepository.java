@@ -2,7 +2,6 @@ package br.com.pco002.repository;
 
 import br.com.pco002.model.GenericEntity;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 
 public class GenericRepository<T extends GenericEntity> {
