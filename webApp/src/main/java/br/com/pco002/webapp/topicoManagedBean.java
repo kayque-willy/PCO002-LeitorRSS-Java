@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -21,7 +20,7 @@ import javax.xml.ws.Service;
 
 @ManagedBean(name = "topicoFeed")
 @SessionScoped
-public class topicoManagedBean {
+public class topicoManagedBean extends genericManagedBean{
 
     //PARAMETROS DO WEBSERVICE
     private static final String urlWsdl = "http://localhost:8080/leitorRSS/LeitorRSS?wsdl";

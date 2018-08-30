@@ -14,23 +14,20 @@ import javax.persistence.Query;
 
 @ManagedBean(name = "index")
 @SessionScoped
-public class indexManagedBean {
+public class indexManagedBean extends genericManagedBean{
 
     @Inject()
     private UsuarioService usuarioService;
-    private SessionController sessionController;
-
     private Usuario usuario = new Usuario();
 
     public indexManagedBean() {
         this.usuarioService = new UsuarioService();
-        this.sessionController = new SessionController();
     }
 
     public String fazerLogin() {
         usuario = usuarioService.fazerLogin(usuario.getEmail(), usuario.getSenha());
         if (usuario != null) {
-            sessionController.setUsuario(usuario);
+            setUsuarioSessao(usuario);
             return "home/home";
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha incorretos!", "Erro no Login!"));

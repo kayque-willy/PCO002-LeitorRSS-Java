@@ -11,31 +11,27 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "home")
 @SessionScoped
-public class homeManagedBean {
+public class homeManagedBean extends genericManagedBean{
 
-    private SessionController sessionController;
-    private Usuario usuario = new Usuario();
     private List<Topico> inscricoes  = new ArrayList();
     
     public homeManagedBean() {
-        this.sessionController = new SessionController();
-        usuario = sessionController.getUsuario();
         carregarInscricoes();
     }
     
     private void carregarInscricoes(){
-        for (Inscricao inscricao : usuario.getInscricoes()) {
+        for (Inscricao inscricao : getUsuarioSessao().getInscricoes()) {
             inscricoes.add(inscricao.getTopico());
         }
     }
     
 //    GETS E SETS
     public Usuario getUsuario() {
-        return usuario;
+        return getUsuarioSessao();
     }
 
     public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+        this.setUsuarioSessao(usuario);
     }
 
     public List<Topico> getInscricoes() {

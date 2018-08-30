@@ -1,9 +1,11 @@
 br\com\pco002\model\Notificacao.class
 br\com\pco002\model\Url_topico.class
+br\com\pco002\webapp\genericManagedBean.class
 br\com\pco002\model\GenericEntity.class
 br\com\pco002\leitor\Feed.class
 br\com\pco002\repository\GenericRepository.class
 br\com\pco002\leitor\ReadTopic.class
+br\com\pco002\webapp\inscricaoManagedBean.class
 br\com\pco002\util\SessionController.class
 br\com\pco002\leitor\ObjectFactory.class
 br\com\pco002\service\TopicoService.class

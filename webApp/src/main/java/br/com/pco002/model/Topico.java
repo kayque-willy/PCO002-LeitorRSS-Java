@@ -96,12 +96,12 @@ public class Topico implements GenericEntity, Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.id);
-        hash = 29 * hash + Objects.hashCode(this.nome);
-        hash = 29 * hash + this.quant;
-        hash = 29 * hash + Objects.hashCode(this.ultimaAtualizacao);
-        hash = 29 * hash + Objects.hashCode(this.urls);
-        hash = 29 * hash + Objects.hashCode(this.inscricoes);
+        hash = 67 * hash + Objects.hashCode(this.id);
+        hash = 67 * hash + Objects.hashCode(this.nome);
+        hash = 67 * hash + this.quant;
+        hash = 67 * hash + Objects.hashCode(this.ultimaAtualizacao);
+        hash = 67 * hash + Objects.hashCode(this.urls);
+        hash = 67 * hash + Objects.hashCode(this.inscricoes);
         return hash;
     }
 
@@ -137,5 +137,7 @@ public class Topico implements GenericEntity, Serializable{
         }
         return true;
     }
+
+    
     
 }

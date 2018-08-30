@@ -69,11 +69,11 @@ public class Url_topico implements GenericEntity, Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.id);
-        hash = 89 * hash + Objects.hashCode(this.url);
-        hash = 89 * hash + Objects.hashCode(this.topico);
-        hash = 89 * hash + Objects.hashCode(this.ultimaAtualizacao);
+        int hash = 3;
+        hash = 13 * hash + Objects.hashCode(this.id);
+        hash = 13 * hash + Objects.hashCode(this.url);
+        hash = 13 * hash + Objects.hashCode(this.ultimaAtualizacao);
+        hash = 13 * hash + Objects.hashCode(this.topico);
         return hash;
     }
 
@@ -95,13 +95,15 @@ public class Url_topico implements GenericEntity, Serializable {
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if (!Objects.equals(this.topico, other.topico)) {
+        if (!Objects.equals(this.ultimaAtualizacao, other.ultimaAtualizacao)) {
             return false;
         }
-        if (!Objects.equals(this.ultimaAtualizacao, other.ultimaAtualizacao)) {
+        if (!Objects.equals(this.topico, other.topico)) {
             return false;
         }
         return true;
     }
+
+    
 
 }

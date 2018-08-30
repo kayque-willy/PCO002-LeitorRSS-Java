@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Título</title>
+        <style>
+            .botao{
+                text-decoration: none;
+                border: 1px solid #000;
+                background: #cccccc;
+                width: 150px;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+            }
+            .botao:hover{
+                background: #dddddd;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="barraDeFerramentas">
+            <p:toolbar>
+                <p:toolbarGroup align="left">
+                    <p:menuButton value="Notificações">
+                        <p:menuitem value="Item de Menu 1" action="pagina1" ajax="false"/>
+                        <p:menuitem value="Item de Menu 2" action="pagina2" ajax="false"/>
+                    </p:menuButton>
+                    <h:outputLink value="/webApp/faces/home/home.xhtml" styleClass="botao">Inicio</h:outputLink>
+                    <h:outputLink value="/webApp/faces/topico/inscricoes.xhtml" styleClass="botao">Inscrever em outros tópicos</h:outputLink>
+                </p:toolbarGroup>
+            </p:toolbar>
+        </h:form>
+        <hr></hr>
+        <div>
+            <ui:insert name="Conteudo"> 
+                Aqui vai o conteudo 
+            </ui:insert>
+        </div>
+    </h:body>
+</html>

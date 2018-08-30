@@ -1,16 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        <p:outputLabel value="Login efetuado com sucesso! Bem vindo!"></p:outputLabel>
-        <hr/>
-        <p:outputLabel value="#{home.usuario.nome}"></p:outputLabel>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/home/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="Conteudo">
+        <p:outputLabel value="Login efetuado com sucesso! Bem vindo!" ></p:outputLabel>
+        <p:outputLabel value=" #{home.usuario.nome}" ></p:outputLabel>
         <p:outputLabel value=" - #{home.usuario.email}"></p:outputLabel>
         <hr/>
         <p:dataList value="#{home.inscricoes}" var="topico" type="ordered">
@@ -18,11 +15,10 @@
                 <h:outputText value="Tópicos em que você se inscreveu"/>  
             </f:facet>
             <h:outputLink value = "/webApp/faces/topico/topico.xhtml" >
-                <h:outputText value="#{topico.nome}" />
+                <h:outputText value="#{topico.nome} - Ultima atualização: #{topico.ultimaAtualizacao}" />
                 <f:param name="topicoId" value="#{topico.id}" />
             </h:outputLink> 
-            <h:outputText value=" - Ultima atualização: #{topico.ultimaAtualizacao}"></h:outputText>  
+            <br/><br/>
         </p:dataList>
-    </h:body>
-</html>
-
+    </ui:define>
+</ui:composition>
