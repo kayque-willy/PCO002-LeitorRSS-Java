@@ -10,15 +10,26 @@
         <p:outputLabel value=" #{home.usuario.nome}" ></p:outputLabel>
         <p:outputLabel value=" - #{home.usuario.email}"></p:outputLabel>
         <hr/>
+        <p:dataList value="#{home.notificacoes}" var="notificacao">
+            <f:facet name="header">  
+                <h:outputText value="Ultimas atualizações:"/>  
+            </f:facet>
+            <h:outputLink value = "/webApp/faces/topico/topico.xhtml" >
+                <h:outputText value="#{notificacao.inscricao.topico.nome} as #{notificacao.data}" />
+                <f:param name="topicoId" value="#{notificacao.inscricao.topico.id}" />
+            </h:outputLink>
+            <h:outputText value=" - #{notificacao.quant} novas noticias" />
+        </p:dataList>
         <h:form>
             <p:dataList value="#{home.topicos}" var="topico" type="ordered">
                 <f:facet name="header">  
                     <h:outputText value="Tópicos em que você se inscreveu"/>  
                 </f:facet>
                 <h:outputLink value = "/webApp/faces/topico/topico.xhtml" >
-                    <h:outputText value="#{topico.nome} - Ultima atualização: #{topico.ultimaAtualizacao} - " />
+                    <h:outputText value="#{topico.nome} - Ultima atualização: #{topico.ultimaAtualizacao}" />
                     <f:param name="topicoId" value="#{topico.id}" />
                 </h:outputLink> 
+                <h:outputText value=" - " />
                 <p:commandButton  value="Cancelar inscrição" action="#{home.cancelarInscricao(topico)}" ajax="false"/>
                 <br/><br/>
             </p:dataList>
