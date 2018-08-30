@@ -16,7 +16,7 @@ import javax.inject.Inject;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-@ManagedBean(name = "topico")
+@ManagedBean(name = "topicoFeed")
 @SessionScoped
 public class topicoManagedBean {
 
@@ -46,7 +46,7 @@ public class topicoManagedBean {
     }
 
     //Consulta o tópico pelo ID passado por parâmetro
-    public void consultarTopico() {
+    private void consultarTopico() {
         String topicoId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("topicoId");
         if (topicoId != null) {
             topico = topicoService.findById(Long.valueOf(topicoId));
@@ -59,7 +59,7 @@ public class topicoManagedBean {
     }
 
     //Inicializa os parametros pra conectar ao webservice
-    public static void iniciarLeitor() {
+    private void iniciarLeitor() {
         try {
             url = new URL(urlWsdl);
             qname = new QName(urlService, contextService);
