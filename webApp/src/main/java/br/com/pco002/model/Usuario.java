@@ -38,9 +38,10 @@ public class Usuario implements GenericEntity, Serializable{
 //    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "usuarios")
 //    private List<Topico> topicos = new ArrayList<Topico>();
     
-    @OneToMany(mappedBy = "usuario", targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "usuario", targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Inscricao> inscricoes = new ArrayList<Inscricao>();
-    
+
+    @Override
     public Long getId() {
         return id;
     }
@@ -57,28 +58,12 @@ public class Usuario implements GenericEntity, Serializable{
         this.nome = nome;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public List<Inscricao> getInscricoes() {
-        return inscricoes;
-    }
-
-    public void setInscricoes(List<Inscricao> inscricoes) {
-        this.inscricoes = inscricoes;
     }
 
     public String getSenha() {
@@ -89,15 +74,31 @@ public class Usuario implements GenericEntity, Serializable{
         this.senha = senha;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public List<Inscricao> getInscricoes() {
+        return inscricoes;
+    }
+
+    public void setInscricoes(List<Inscricao> inscricoes) {
+        this.inscricoes = inscricoes;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.id);
-        hash = 97 * hash + Objects.hashCode(this.nome);
-        hash = 97 * hash + Objects.hashCode(this.email);
-        hash = 97 * hash + Objects.hashCode(this.senha);
-        hash = 97 * hash + Objects.hashCode(this.tipo);
-        hash = 97 * hash + Objects.hashCode(this.inscricoes);
+        hash = 67 * hash + Objects.hashCode(this.id);
+        hash = 67 * hash + Objects.hashCode(this.nome);
+        hash = 67 * hash + Objects.hashCode(this.email);
+        hash = 67 * hash + Objects.hashCode(this.senha);
+        hash = 67 * hash + Objects.hashCode(this.tipo);
+        hash = 67 * hash + Objects.hashCode(this.inscricoes);
         return hash;
     }
 

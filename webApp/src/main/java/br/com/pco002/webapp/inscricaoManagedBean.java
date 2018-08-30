@@ -58,6 +58,7 @@ public class inscricaoManagedBean extends genericManagedBean {
         //Salva o topico
         topicoService.save(topico);
         reloadUsuarioSessao();
+        verificarInscricoes();
     }
 
     public List<Topico> getTopicos() {

@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 
-@Entity(name="")
+@Entity(name="Inscricao")
 @Table(name="Inscricao", schema="rss_schema")
 public class Inscricao implements GenericEntity, Serializable{
 
@@ -39,7 +39,7 @@ public class Inscricao implements GenericEntity, Serializable{
     @JoinColumn(name = "usuario_id", nullable=false)
     private Usuario usuario;
     
-    @OneToMany(mappedBy = "inscricao", targetEntity = Notificacao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "inscricao", targetEntity = Notificacao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Notificacao> notificacao = new ArrayList<Notificacao>();
 
     public Long getId() {

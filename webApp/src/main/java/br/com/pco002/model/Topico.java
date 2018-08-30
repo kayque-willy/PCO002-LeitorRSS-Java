@@ -35,10 +35,10 @@ public class Topico implements GenericEntity, Serializable{
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date ultimaAtualizacao;
     
-    @OneToMany(mappedBy = "topico", targetEntity = Url_topico.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "topico", targetEntity = Url_topico.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Url_topico> urls = new ArrayList<Url_topico>();
     
-    @OneToMany(mappedBy = "topico", targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "topico", targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Inscricao> inscricoes = new ArrayList<Inscricao>();
     
 //    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL, CascadeType.MERGE})
