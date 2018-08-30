@@ -19,7 +19,7 @@ public class indexManagedBean {
     @Inject()
     private UsuarioService usuarioService;
     private SessionController sessionController;
-    
+
     private Usuario usuario = new Usuario();
 
     public indexManagedBean() {
@@ -30,7 +30,7 @@ public class indexManagedBean {
     public String fazerLogin() {
         usuario = usuarioService.fazerLogin(usuario.getEmail(), usuario.getSenha());
         if (usuario != null) {
-             sessionController.setUsuario(usuario);
+            sessionController.setUsuario(usuario);
             return "home/home";
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha incorretos!", "Erro no Login!"));

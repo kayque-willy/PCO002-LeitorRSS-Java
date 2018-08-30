@@ -157,7 +157,7 @@
                         <configuration>
                             <bindingDirectory>${project.basedir}/src/bindings</bindingDirectory>
                             <wsdlUrls>
-                                <!--<wsdlUrl>http://localhost:8080/leitorRSS/LeitorRSS?wsdl</wsdlUrl>-->
+                                <wsdlUrl>http://localhost:8080/leitorRSS/LeitorRSS?wsdl</wsdlUrl>
                             </wsdlUrls>
                         </configuration>
                     </execution>

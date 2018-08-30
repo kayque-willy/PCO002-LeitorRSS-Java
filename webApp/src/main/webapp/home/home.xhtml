@@ -10,8 +10,8 @@
     <h:body>
         <p:outputLabel value="Login efetuado com sucesso! Bem vindo!"></p:outputLabel>
         <hr/>
-        <p:outputLabel value="#{home.usuario.email}"></p:outputLabel>
         <p:outputLabel value="#{home.usuario.nome}"></p:outputLabel>
+        <p:outputLabel value=" - #{home.usuario.email}"></p:outputLabel>
         <hr/>
         <p:dataList value="#{home.inscricoes}" var="topico" type="ordered">
             <f:facet name="header">  
