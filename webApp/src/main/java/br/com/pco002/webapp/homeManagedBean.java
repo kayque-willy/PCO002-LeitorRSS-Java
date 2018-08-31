@@ -40,6 +40,12 @@ public class homeManagedBean extends genericManagedBean {
             notificacoes.addAll(topicoService.getNotificacao(inscricao));
         }
     }
+    
+    public void atualizarNotificacao(){
+        carregarNotificaoes();
+        reloadUsuarioSessao();
+        carregarNotificaoes();
+    }
 
     public void cancelarInscricao(Topico topico) {
         List<Inscricao> remove = new ArrayList();

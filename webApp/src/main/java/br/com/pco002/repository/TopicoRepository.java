@@ -36,7 +36,7 @@ public class TopicoRepository extends GenericRepository<Topico> {
 //        
 //        Root<Notificacao> notificacoes =  criteria.from(Notificacao.class);
 //        criteria.select(notificacoes);
-//        criteria.where(getCriteriaBuilder().equal(notificacoes.get("inscricao"), inscricao));
+//        criteria.where(getCriteriaBuilder().equal(notificacoes.get(Notificacao_.inscricao), inscricao));
 //        
 //        return getManager().createQuery(criteria).getResultList();
     }
