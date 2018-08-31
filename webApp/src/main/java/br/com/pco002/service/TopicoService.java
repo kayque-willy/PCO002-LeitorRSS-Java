@@ -1,5 +1,7 @@
 package br.com.pco002.service;
 
+import br.com.pco002.model.Inscricao;
+import br.com.pco002.model.Notificacao;
 import br.com.pco002.model.Topico;
 import br.com.pco002.repository.TopicoRepository;
 import java.util.List;
@@ -24,5 +26,9 @@ public class TopicoService {
 
     public List<Topico> getAll() {
         return topicoRepository.getAll();
+    }
+    
+    public List<Notificacao> getNotificacao(Inscricao inscricao) {
+        return topicoRepository.getNotificacao(inscricao);
     }
 }

@@ -37,7 +37,7 @@ public class homeManagedBean extends genericManagedBean {
     private void carregarNotificaoes() {
         notificacoes = new ArrayList();
         for (Inscricao inscricao : getUsuarioSessao().getInscricoes()) {
-            notificacoes.addAll(inscricao.getNotificacao());
+            notificacoes.addAll(topicoService.getNotificacao(inscricao));
         }
     }
 
